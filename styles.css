@@ -1,0 +1,805 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        
+    body::before {
+    content: "";
+    position: fixed; /* Fixn� pozice zajist�, �e z�clona pokryje celou obrazovku */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Polopr�hledn� �ern� */
+    z-index: 1; /* Um�st�n� pod ostatn� obsah str�nky */
+    pointer-events: none; /* Zajist�, �e z�clona nebude blokovat interakce */
+}
+
+        h1 {
+           margin-bottom: 15px;
+           text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+        }
+
+        #content {
+            max-width: 1005px;
+            margin: 0 auto;
+            padding: 0px;
+        }
+
+        a {
+            color: #ff5733;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff5733;
+            text-decoration: underline;
+        }
+        
+        a.hero {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #F5C519;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7); /* V�razn�j�� �ern� st�n pod cenovkou */
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+        }
+
+        a.hero:hover {
+            background: #570301;
+        }
+
+a.imdb {
+  display: inline-block;
+  padding: 5px;       /* P�id� vnit�n� okraje pro lep�� vzhled (voliteln�) */
+  background-color: #FFC40E;
+  color: black;        /* Nastav� barvu p�sma na �ernou */
+  text-decoration: none;
+  font-size: 0.7rem;
+  border-radius: 5px; /* Nastav� zaoblen� rohy (lze upravit podle pot�eby) */
+  font-weight: bold;   /* Nastav� tu�n� p�smo */
+  transition: background 0.3s;
+  vertical-align: middle;  /* Zarovn� prvek vertik�ln� s textem */
+}
+
+a.imdb:hover {
+  background-color: #E2B616; /* Zm�na barvy pozad� p�i najet� na odkaz */
+}
+
+a.hero.red {background: #C91E1E;}
+a.hero.red:hover {background: #570301;}
+
+a.hero.blue {background: #0A7FE7;}
+a.hero.blue:hover {background: #054ba1;}
+
+a.hero.purple {background: #B230B1;}
+a.hero.purple:hover {background: #711173;}
+
+a.hero.green {background: #27B03C;}
+a.hero.green:hover {background: #175025;}
+
+a.hero.orange {background: #ff5733;}
+a.hero.orange:hover {background: #c13c24;}
+
+a.hero.yellow {background: #FCC324;}
+a.hero.yellow:hover {background: #b0891a;}
+
+.icon {
+    display: inline-flex; /* Pou��v� flexbox pro lep�� zarovn�n� */
+    align-items: center; /* Vertik�ln� zarovn�n� obsahu */
+    vertical-align: middle; /* Zarovn� cel� span na stejnou linii s okoln�m textem */
+    gap: 0.3em; /* Mezera mezi ikonou a textem */
+}
+
+.icon::before {
+    content: "";
+    display: inline-block; /* Zajist� spr�vn� zarovn�n� jako text */
+    background-image: url('img/ico_rss.png'); /* Ikona */
+    background-size: contain; /* P�izp�sob� obr�zek jeho kontejneru */
+    background-repeat: no-repeat; /* Zabr�n� opakov�n� obr�zku */
+    width: 1em; /* Stejn� ���ka jako v��ka textu */
+    height: 1em; /* Stejn� v��ka jako text */
+    vertical-align: middle; /* Zarovn� ikonu s textem na linii */
+}
+
+.icon.rss::before {background-image: url('img/ico_rss.png');}
+.icon.github::before {background-image: url('img/ico_github.png');}
+.icon.mail::before {background-image: url('img/ico_mail.png');}
+.icon.whatsapp::before {background-image: url('img/ico_whatsapp.png');}
+.icon.facebook::before {background-image: url('img/ico_facebook.png');}
+.icon.twitter::before {background-image: url('img/ico_twitter.png');}
+.icon.instagram::before {background-image: url('img/ico_instagram.png');}
+.icon.youtube::before {background-image: url('img/ico_youtube.png');}
+.icon.twitch::before {background-image: url('img/ico_twitch.png');}
+.icon.reddit::before {background-image: url('img/ico_reddit.png');}
+.icon.globe::before {background-image: url('img/ico_globe.png');}
+.icon.kofi::before {background-image: url('img/ico_kofi.png');}
+.icon.amateri::before {background-image: url('img/ico_amateri.png');}
+.icon.stats::before {background-image: url('img/ico_stats.png');}
+.icon.cloudflare::before {background-image: url('img/ico_cloudflare.png');}
+.icon.firebase::before {background-image: url('img/ico_firebase.png');}
+
+
+/* Styl pro burger menu */
+.burger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0); /* Pr�hledn� pozad� */
+    padding: 10px 20px;
+    z-index: 100;
+    display: flex;
+    justify-content: right; /* Odkazy se �ad� */
+    align-items: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.burger a {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 3.0rem; /* Velikost k��ku */
+    color: white; /* Barva k��ku */
+    border: none; /* ��dn� ohrani�en� */
+    cursor: pointer; /* Ukazatel na ruku p�i najet� */
+    z-index: 100; /* Nad ostatn� obsah overlay */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animace pro hover efekt */
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.9);
+}
+
+.burger a:hover {
+    color: #ff5733; /* Zm�na barvy p�i najet� */
+    transform: scale(1.2); /* Zv�razn�n� p�i najet� */
+    text-decoration: none;
+}
+
+/* Styl pro overlay burgermenu */
+.burgermenu {
+    position: fixed;
+    top: 0; /* Vzd�lenost pod navbar */
+    right: 0;
+    width: 340px;
+    background-color: rgba(0, 0, 0, 0.7); /* Pr�hledn� pozad� */
+    display: none;
+    text-align: justify;
+    z-index: 99;
+    color: white;
+    font-size: 1.2rem;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: calc(100vh); /* Omez� v��ku na % okna minus v��ka navbara */
+    overflow-y: auto; /* Povolen� scrollov�n� pouze v overlay */
+    transition: max-height 0.3s ease-in-out;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px); /* Rozmaz�n� pozad� pod overlay */
+}
+
+.burgermenu-content {
+    position: relative;
+    padding: 20px;
+    margin-top: -24px;
+    margin-bottom: 40px;
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 95vh;  /* Omezuje maxim�ln� v��ku na % v��ky okna */
+    overflow-y: auto; /* Povolen� scrollov�n� uvnit� overlay */
+}
+
+.burgermenu a {
+    color: #ff5733;
+    font-weight: bold;
+    border: none; /* ��dn� ohrani�en� */
+    cursor: pointer; /* Ukazatel na ruku p�i najet� */
+    z-index: 100; /* Nad ostatn� obsah overlay */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animace pro hover efekt */
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.9);
+}
+
+.burgermenu a:hover {
+    color: #C13C24; /* Zm�na barvy p�i najet� */
+    transform: scale(1.2); /* Zv�razn�n� p�i najet� */
+    text-decoration: none;
+}
+
+.burgermenu-content::-webkit-scrollbar {
+    display: none; /* Skryt� scrollbar */
+}
+
+.burgermenu-content {
+    -ms-overflow-style: none;  /* Pro IE a Edge */
+    scrollbar-width: none; /* Pro Firefox */
+}
+
+#burgermenu-text {
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+
+#burgermenu h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.9);
+}
+
+.close-burgermenu {
+    position: absolute; /* Um�st�n� relativn� k overlay */
+    top: 8px; /* Vzd�lenost od horn�ho okraje */
+    right: 25px; /* Vzd�lenost od prav�ho okraje */
+    font-size: 3.5rem; /* Velikost k��ku */
+    color: white; /* Barva k��ku */
+    background-color: transparent; /* Pr�hledn� pozad� */
+    border: none; /* ��dn� ohrani�en� */
+    cursor: pointer; /* Ukazatel na ruku p�i najet� */
+    z-index: 100; /* Nad ostatn� obsah overlay */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animace pro hover efekt */
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.9);
+}
+
+.close-burgermenu:hover {
+    color: #ff5733; /* Zm�na barvy p�i najet� */
+    transform: scale(1.2); /* Zv�razn�n� p�i najet� */
+}
+
+.copy {
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+        
+footer {
+    position: relative;
+    background-color: #0A0915;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center; /* Vertik�ln� zarovn�n� */
+    justify-content: space-between; /* Logo vlevo, text vpravo */
+    z-index: 2; /* Vy��� ne� z�clona */
+}
+
+footer .logo {
+    max-height: 65px; /* Nastav� maxim�ln� v��ku loga */
+    margin-right: 10px; /* Mezera mezi logem a textem, pokud je t�eba */
+}
+
+.footer-text {
+    text-align: right; /* Zarovn�n� textu doprava */
+    flex: 1; /* Zabere zbyl� m�sto mezi logem a okrajem */
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.section {
+    display: flex-start;
+    justify-content: center;
+    align-items: flex-start; /* Uprav�me na flex-start pro lep�� pozicov�n� */
+    min-height: 100vh;
+    padding: 40px;
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+    min-height: 400px;
+    text-align: left;
+}
+
+.item {
+    display: flex; /* Flexbox pro zaji�t�n� vodorovn�ho uspo��d�n� */
+    justify-content: space-between; /* Rozm�st�n� prvk� s mezerou mezi nimi */
+    align-items: flex-start; /* Zarovn� obsah nahoru */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.item-text {
+    max-width: 48%;
+    min-width: 340px;
+    text-align: left;
+    margin-right: 25px;
+}
+
+.item-video {
+    max-width: 48%;
+    display: flex;
+    justify-content: flex-end; /* Zarovn� video k prav� stran� */
+    align-items: flex-start; /* Zaji�t�n�, �e je video zarovn�no nahoru */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 7px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    overflow: hidden; /* Skryje p�et�kaj�c� obsah */
+    border: none; /* Zbav� se p��padn�ho r�me�ku */
+    margin-top: 80px;
+}
+
+.item-video iframe {
+    width: 450px; /* Umo�n�, aby se video p�izp�sobilo rodi�ovsk�mu kontejneru */
+    height: auto;
+    aspect-ratio: 16 / 9; /* Zajist� spr�vn� pom�r stran */
+    border-radius: 7px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.item h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.item p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Media Queries pro mobiln� zobrazen� */
+@media (max-width: 990px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Zarovn� obsah k horn�mu okraji */
+        padding: 20px;
+        min-height: 100vh; /* Zaji�t�n�, �e sekce vypln� v��ku okna */
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .section-content {
+        max-width: 100%;
+        padding: 10px;
+        width: 100%;
+    }
+    
+
+
+.list-item {
+    display: flex;
+    flex-direction: column; /* Pokud chce� udr�et obsah vertik�ln� */
+    width: 33.33%; /* Pro 3 polo�ky na ��dku na desktopu */
+    min-width: 300px; /* Minimum ���ky pro ka�dou polo�ku */
+}
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Zarovn� obsah vlevo */
+        justify-content: flex-start; /* P�ipout� obsah k horn� ��sti */
+        width: 100%;
+        gap: 0; /* Odstran� zbyte�n� prostor mezi videem a textem */
+    }
+
+    .item-video {
+        order: -1; /* Video bude v�dy nad textem */
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        padding-top: 56.25%; /* Pom�r stran 16:9 */
+        height: 0; /* Zajist�, �e se v��ka odv�j� od ���ky */
+        overflow: hidden;
+        margin-top: 0; /* Odstran� necht�n� prostor naho�e */
+        margin-bottom: 0; /* Odstran� necht�n� prostor dole */
+    }
+
+    .item-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .item-text {
+        width: 100%;
+        text-align: left;
+        margin-top: 10px; /* Mal� odstup mezi videem a textem */
+        margin-bottom: 0; /* Odstran� necht�n� prostor dole */
+    }
+
+    .episodes-container {
+        min-width: 100px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 25px;
+        text-align: center;
+    }
+}
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            animation: lightenBackground 4s forwards;
+        }
+
+        #overlay img {
+            max-width: 460px;
+            animation: rotateShrink 2s forwards;
+        }
+
+        /* Animace pro zmen�en� a ot��en� loga */
+        @keyframes rotateShrink {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            100% {
+                transform: rotate(720deg) scale(0);
+            }
+        }
+
+        /* Animace pro postupn� rozjasn�n� pozad� */
+        @keyframes lightenBackground {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .content {
+            display: none;
+        }
+
+        .show-content {
+            display: block;
+        }
+
+#filters {
+    padding: 5px; /* Nastaven� paddingu pro cel� element */
+    margin-top: 0px; /* Voliteln� m��e� nastavit margin-top, pokud je to pot�eba */
+    text-align: center;
+}
+        
+#labels a, #filters a {
+    display: inline-block;
+    padding: 5px;
+    margin-top: 5px;
+    background: #232323;
+    color: white;
+    text-decoration: none;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#labels a:hover, #filters a:hover {
+    background: #FF5733;
+}
+
+#tabs {
+    display: flex;
+    padding: 0;
+}
+
+#tabs a {
+    flex: 1;
+    text-align: center;
+    padding: 10px 15px;
+    background: none;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, color 0.3s;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+    font-weight: bold;
+}
+
+#tabs a:hover {
+    border-bottom: 3px solid #FF5733;
+}
+
+#tabs a.active {
+    color: #fff;
+    border-bottom: 3px solid #FF5733;
+}
+
+.episodes-container {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between; /* Sloupce budou po kraj�ch */
+    width: 100%; /* Vypln� celou ���ku */
+    margin-top: -10px;
+}
+
+.column {
+    flex: 1; /* Oba sloupce budou stejn� �irok� */
+}
+
+.column a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2); /* Polopr�hledn� �ern� */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.column a:hover {
+    background: rgba(0, 0, 0, 0.5); /* Polopr�hledn� �ern� */
+    text-decoration: none;
+}
+
+    .similar-container {
+        display: flex;
+        flex-direction: column; /* Polo�ky budou pod sebou */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .similar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        background: rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+        transition: background 0.3s;
+        color: white;
+    }
+
+    .similar:hover {
+        background: rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+        color: white;
+    }
+
+    .similar .image {
+        width: 100px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 5px;
+        flex-shrink: 0;
+    }
+
+    .similar .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .similar .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+.similar .title { 
+    font-weight: bold;
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Maxim�ln� ��dk� */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* P�id� � pokud je text del�� */
+    max-height: 1.4rem; /* Maxim�ln� v��ka pro ��dky */
+}
+
+.similar .description {
+    font-size: 0.8rem;
+    color: #ddd;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Maxim�ln� ��dk� */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* P�id� � pokud je text del�� */
+    max-height: 140px; /* P�ibli�n� v��ka pro ��dky */
+}
+
+.list-container {
+    display: none; /* Skryt� na mal�ch obrazovk�ch */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    z-index: 2; /* Vy��� ne� z�clona */
+}
+
+
+.list {
+    display: flex;
+    justify-content: center; /* Nebo 'center', pokud chce� st�edov� zarovn�n� */
+    gap: 5px;
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Pokud chce�, m��e� zm�nit tuto hodnotu */
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    width: 33.33%; /* Nastaven� ���ky polo�ek na 30% */
+}
+
+.list-item .image {
+    width: 100px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.list-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list-item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item .title {
+    font-weight: bold;
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;<img src="logo.webp" alt="watch" style="width: 40px; position: relative; top: 2px;">
+    text-overflow: ellipsis;
+    max-height: 1.4rem;
+}
+
+.list-item .description {
+    font-size: 0.8rem;
+    color: #ddd;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 140px;
+}
+
+.list-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.title-info {
+    position: absolute;
+    down: 25px;
+    left: 10px;
+    background-color: rgba(210, 0, 0, 0.8); /* P��klad zm�ny pozad� pro slevu */
+    color: black;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 2;
+    white-space: nowrap;
+    border: 1px solid black;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.spacer {
+    height: 10px; /* V��ka prostoru */
+    min-width: 100%;
+    visibility: hidden; /* Neviditeln�, ale m� velikost */
+    color: transparent; /* Neviditeln� text */
+    user-select: none;
+}
+
+.ad-container {
+    text-align: center;
+    color: #ddd;
+}
+
+.grid-container {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+    align-items: stretch;
+    padding: 0px;
+    width: 100%; /* Zajist�, �e kontejner bude zab�rat 100% ���ky rodi�e */
+    max-width: 100%; /* Zajist�, �e kontejner nebudeme omezovat */
+}
+
+/* Pokud je ���ka obrazovky men�� ne� 600px, nastav�me titul na 100% ���ky (mobil) */
+@media (max-width: 600px) {
+    .list-item {
+        width: 100%; /* Mobiln� za��zen� - polo�ky zab�raj� celou ���ku */
+        margin-right: 0; /* ��dn� mezera mezi polo�kami */
+        margin-bottom: 5px; /* Trochu prostoru pod ka�dou polo�kou */
+    }
+}
+
+/* Pokud je ���ka obrazovky mezi 600px a 800px, nastav�me 2 tituly na ��dku */
+@media (min-width: 600px) and (max-width: 980px) {
+    .list-item {
+        width: 48%; /* Dva tituly na ��dku, ka�d�mu 48% ���ky */
+        margin-right: 0%; /* Mezera mezi titulama */
+        margin-bottom: 5px; /* Trochu prostoru pod ka�dou polo�kou */
+    }
+
+    .list-item:nth-child(2n) {
+        margin-right: 0; /* Zru�en� mezery pro sud� polo�ky */
+    }
+}
+
+/* Pokud je ���ka obrazovky v�t�� ne� 800px, nastav�me 3 tituly na ��dku */
+@media (min-width: 981px) {
+    .list-item {
+        width: 30%; /* T�i tituly na ��dku */
+        margin-right: 0%; /* Mezera mezi titulama */
+        margin-bottom: 5px; /* Trochu prostoru pod ka�dou polo�kou */
+    }
+
+    .list-item:nth-child(3n) {
+        margin-right: 0; /* Zru�en� mezery pro t�et� polo�ku */
+    }
+}
+

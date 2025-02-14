@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>    
+        <meta charset="UTF-8">    
+        <meta name="locale" content="en_US">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <meta name="description" content="Free video streaming platform with transgender movie and series.">    
+        <meta name="keywords" content="slova, oddělená, čárkami">    
+        <meta name="author" content="Gabriela Pražská">    
+        <meta name="copyright" content="© 2025 Gabriela Pražská">    
+        <meta name="email" content="mszrzava@gmail.com">    
+        <meta name="apple-mobile-web-app-capable" content="yes">    
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">    
+        <meta name="theme-color" content="#570301">    
+        <meta name="msapplication-TileColor" content="#570301">    
+        <meta name="msapplication-TileImage" content="logo.webp">    
+        <meta name="apple-mobile-web-app-title" content="Zrzava.com">    
+        <meta name="mobile-web-app-capable" content="yes">    
+        <meta name="twitter:card" content="summary_large_image">    
+        <meta property="og:type" content="website">    
+        <meta property="og:image" content="https://watch.zrzava.com">    
+        <meta property="og:title" content="Watch+">    
+        <meta property="og:description" content="Free video streaming platform with transgender movie and series.">    
+        <meta property="og:url" content="https://watch.zrzava.com">    
+        <title>Watch+</title>    
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="styles.css">    
+        <link rel="icon" href="logo.webp">    
+        <link rel="icon" type="image/png" href="logo.webp">    
+        <link rel="apple-touch-icon" href="logo.webp">    
+        <link rel="canonical" href="https://www.zrzava.com/" />
+    </head>
+    <body>
+
+            <!-- Lišta s menu -->
+            <div class="burger">     
+                <a href="././" title="homepage"><img src="logo.webp" alt="watch" style="width: 40px; position: relative; top: 3px;"></a> 
+                <a href="#" title="filters" class="burgermenu-trigger" data-overlay="menu" style="margin-right: 25px;"><img src="img/ico_filter.png" alt="watch" style="width: 33px; position: relative; top: 1px;"></a>  
+            </div>
+            <!-- Overlay -->
+            <div id="burgermenu" class="burgermenu">    
+                <div class="burgermenu-content">        
+                    <span id="close-burgermenu" class="close-burgermenu"></span>                  
+                    <div id="burgermenu-menu" class="burgermenu-section">           
+                        <h1>Filters</h1>            
+                        <div id="filters">
+                            <!-- zde se vykreslí seznam filtrů -->
+                        </div>        
+                <p class="copy">
+                    Runtime <span id="runtimes"></span><br>
+                    Follow our whatsapp <a href="https://whatsapp.com/channel/0029VayppOpId7nVMpQ2Qr0K" target="_blank">newsletter</a>.<br> 
+                    Your <a href="https://ko-fi.com/gabbiexoxo" target="_blank">support</a> helps us grow. 
+                    Thank you!<br>
+                    <span style="font-size: 0.6rem;">(c) 2024-<span class="current-year"></span> watch.zrzava.com<br>
+                    <a href="">dmca</a> <a href="">disclaimer</a></span>
+                </p>    
+                    </div>                 
+                </div>
+            </div>
+                
+<div id="content">
+
+    <!-- Kontejner pro seznam titulů (zobrazen, pokud není parametr play v URL) -->
+    <div class="list-container" style="display:none; min-height: 100vh">
+        <!-- Seznam titulů bude vložen sem pomocí JavaScriptu -->
+    </div>
+
+    <!-- Kontejner pro zobrazení detailu titulu -->
+    <div id="title">
+        <!-- Detaily titulu budou vloženy sem, pokud je parametr play v URL -->
+    </div>
+    
+</div>
+        <!-- Sekce pro Footer -->
+        <footer>
+            <a href="watch"><img src="logo.webp" alt="Footer Logo" class="footer logo"></a>    
+            <div class="footer-text">        
+                <p>Copyright &copy; 2024-<span class="current-year"></span> Gabriela Prazska<br />            
+                    Powered by <a href="https://zrzava.com/cms" class="icon globe">ZrzavaCMS</a>,
+                    hosted on <a href="https://github.com" class="icon github">GitHub</a>,<br>
+                    protected by <a href="https://cloudflare.com" class="icon cloudflare">CloudFlare</a>.
+                    <a href="https://whatsapp.com/channel/0029VayppOpId7nVMpQ2Qr0K" class="icon whatsapp">Newsletter</a>.
+                </p>    
+            </div>
+        </footer>
+
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('gabbiexoxo', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support us',
+    'floating-chat.donateButton.background-color': '#144B63',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+
+<script src="content.js"></script>
+<script src="layout.js"></script>
+
+    </body>
+</html>
