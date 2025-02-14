@@ -11,16 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Specifická data s pevně přiřazeným obrázkem
     const dateSpecificImages = {
-        "2025-02-14": { url: "img/bg/valentyn.webp", caption: "Valentýn" },
-        "2025-04-01": { url: "img/bg/valentyn.webp", caption: "April" },
-        "2025-08-31": { url: "img/bg/valentyn.webp", caption: "Back to school" },
-        "2025-09-01": { url: "img/bg/valentyn.webp", caption: "Back to school" },
-        "2025-09-02": { url: "img/bg/valentyn.webp", caption: "Back to school" },
-        "2025-12-24": { url: "img/bg/vanoce.webp", caption: "Vánoční kouzlo" },
-        "2025-12-25": { url: "img/bg/vanoce.webp", caption: "Vánoční kouzlo" },
-        "2025-12-26": { url: "img/bg/vanoce.webp", caption: "Vánoční kouzlo" },
-        "2025-12-31": { url: "img/bg/silvestr.webp", caption: "Silvestr - Nový rok" },
-        "2026-01-01": { url: "img/bg/silvestr.webp", caption: "Silvestr - Nový rok" }
+        "2025-02-14": { url: "img/bg/chatavlese.webp", caption: "Valentýn" },
+        "2025-04-01": { url: "img/bg/chatavlese.webp", caption: "April" },
+        "2025-08-31": { url: "img/bg/chatavlese.webp", caption: "Back to school" },
+        "2025-09-01": { url: "img/bg/chatavlese.webp", caption: "Back to school" },
+        "2025-09-02": { url: "img/bg/chatavlese.webp", caption: "Back to school" },
+        "2025-12-24": { url: "img/bg/chatavlese.webp", caption: "Vánoční kouzlo" },
+        "2025-12-25": { url: "img/bg/chatavlese.webp", caption: "Vánoční kouzlo" },
+        "2025-12-26": { url: "img/bg/chatavlese.webp", caption: "Vánoční kouzlo" },
+        "2025-12-31": { url: "img/bg/chatavlese.webp", caption: "Silvestr - Nový rok" },
+        "2026-01-01": { url: "img/bg/chatavlese.webp", caption: "Silvestr - Nový rok" }
     };
 
 // Vytvoření prvku pro text
