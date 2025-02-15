@@ -1,4 +1,4 @@
-﻿
+
 // Last UPDATE
         const repo = "zrzava/watch"; // Název repozitáře
         const filePath = "titles.json"; // Cesta k souboru, který sleduješ
@@ -40,7 +40,6 @@
 
 
 
-
 // All RUNTIMES
 fetch("titles.json")
     .then(response => response.json())
@@ -78,3 +77,15 @@ fetch("titles.json")
     .catch(error => console.error("Chyba při načítání JSON:", error));
 
 
+
+// Počet TITULŮ
+fetch("titles.json")
+    .then(response => response.json())
+    .then(data => {
+        // Spočítá počet titulů v JSONu
+        let totalTitles = data.titles.length;
+
+        // Vložení výsledku do span elementu
+        document.getElementById("all-titles").textContent = totalTitles;
+    })
+    .catch(error => console.error("Chyba při načítání JSON:", error));
