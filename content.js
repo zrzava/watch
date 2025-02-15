@@ -411,44 +411,6 @@ fetch("titles.json")
 
 
 
-// All runtimes
-fetch("titles.json")
-    .then(response => response.json())
-    .then(data => {
-        let totalMinutes = 0;
-
-        // Projít všechny tituly a přičíst runtime
-        data.titles.forEach(title => {
-            if (title.runtime) {
-                let runtimeStr = title.runtime.trim();
-                let hours = 0;
-                let minutes = 0;
-
-                // Hledání hodin a minut v textu
-                if (runtimeStr.includes('h')) {
-                    hours = parseInt(runtimeStr.split('h')[0].trim());
-                    runtimeStr = runtimeStr.split('h')[1].trim();
-                }
-                if (runtimeStr.includes('min')) {
-                    minutes = parseInt(runtimeStr.split('min')[0].trim());
-                }
-
-                // Sečíst celkový čas v minutách
-                totalMinutes += (hours * 60) + minutes;
-            }
-        });
-
-        // Převod minut na hodiny a minuty
-        let hours = Math.floor(totalMinutes / 60);
-        let minutes = totalMinutes % 60;
-
-        // Vložení výsledku do span elementu
-        document.getElementById("runtimes").textContent = `${hours}h ${minutes}min`;
-    })
-    .catch(error => console.error("Chyba při načítání JSON:", error));
-    
-    
-
 
 
 // API pro IMDb hodnocení
