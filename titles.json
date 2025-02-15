@@ -1,6 +1,20 @@
 {
   "titles": [
     {
+      "id": "lola-2019",
+      "title": "Lola (2019)",
+      "description": "Lola and the Sea. Lola, 18 years old, bleach blonde hair, lives in a foster home with Samir, her only friend. Impulsive and lonely, she is trying to get her diploma as a veterinary assistant. When her mother passes away, her father Phillip makes sure that Lola will miss the ceremony. Two years before that, Philip was throwing her out of the family home: at the time, Lola was still Lionel - Philippe is determined to fulfill Catherine's last wish: to be dispersed to the North Sea, in the dunes of her childhood home. Lola on the other hand is furious against her father, but she will not leave her mother alone in this last journey. So they take off together, both unwilling to share a car but determined to take Catherine home.",
+      "labels": ["drama", "parents", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["french", "flemish", "cs-subs"],
+      "items": [
+        { "title": "movie", "link": "https://www.youtube.com/embed/kbBpiy2GkGo?si=zFwNteg4YUBkxl7V" }
+       ],
+      "runtime": "90 min",
+      "imdb": "tt8356178",
+      "creator": ["??"]
+    },
+    {
       "id": "tangerine-2015",
       "title": "Tangerine (2015)",
       "description": "After twenty-eight long days of absence, Sin-Dee is back on the block. It's Christmastime, and everyone wants to get into the festive spirit; however, Sin-Dee is in for a shock when she accidentally discovers that Chester, the love of her life, has been cheating on her. And to think that poor Sin-Dee has been making plans for the future. To save what's left of her dignity, heartbroken Sin-Dee embarks on a desperate mission to locate two-timing Chester, and no one can stop her--not even her best friend Alexandra, who vainly tries to be the voice of reason. Now, nothing can stand in the way of justice. After all, who wants to live a lie?",
