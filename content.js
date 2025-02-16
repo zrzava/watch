@@ -147,7 +147,7 @@
             }
 
             // Změníme title stránky na název titulu
-            document.title = `${titleData.title} on Watch+`;
+            document.title = `${titleData.title} na Watch+`;
             
             let metaDescription = document.querySelector('meta[name="description"]');
 if (metaDescription) {
