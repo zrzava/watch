@@ -183,7 +183,7 @@ if (metaOgImage) {
 
             let episodesHTML = "";
             if (titleData.items && titleData.items.length > 1) {
-                episodesHTML = `<a href="#" onclick="showTab(event, 'episodes')">Episodes (${titleData.items.length})</a>`;
+                episodesHTML = `<a href="#" onclick="showTab(event, 'episodes')">Epizody (${titleData.items.length})</a>`;
             }
 
             let labelsHTML = titleData.labels.map(label => `<a href="?tag=${label}" class="label">${label}</a>`).join(" ");
@@ -201,7 +201,7 @@ let similarTitles = data.titles
     );
 
             if (similarTitles.length > 0) {
-                relatedHTML = `<a href="#" onclick="showTab(event, 'similar')">Related</a>`;
+                relatedHTML = `<a href="#" onclick="showTab(event, 'similar')">Podobné</a>`;
             }
 
             let generatedHtml = `
@@ -209,7 +209,7 @@ let similarTitles = data.titles
                 <div class="section-content item-text">
                     <h1>${titleData.title}</h1>
                     <div id="tabs">
-                        <a href="#" class="active" onclick="showTab(event, 'summary')">Summary</a>
+                        <a href="#" class="active" onclick="showTab(event, 'summary')">Shrnutí</a>
                         ${episodesHTML}
                         ${relatedHTML}
                     </div>
