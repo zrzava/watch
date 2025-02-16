@@ -44,7 +44,7 @@
 
                 let tipsHTML = ` 
                     <div class="list-header">
-                        <h1>${tag ? `Watch ${tag} titles` : "Watch TG Titles"}</h1>
+                        <h1>${tag ? `Sleduj ${tag}` : "Transgender filmy a seriály"}</h1>
                     </div>
                     <div class="list-content">
                 `;
