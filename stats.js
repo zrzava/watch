@@ -40,6 +40,50 @@
 
 
 
+
+
+// Check for new title IDs
+const jsonUrl = "https://raw.githubusercontent.com/zrzava/watch/main/titles.json";
+
+async function checkNewTitles() {
+    try {
+        // Fetch the latest titles.json
+        const response = await fetch(jsonUrl);
+        const latestData = await response.json();
+
+        // Get previous data from localStorage
+        const prevData = JSON.parse(localStorage.getItem("prevTitles")) || [];
+
+        // Extract IDs from the current and previous data
+        const latestIDs = latestData.map(item => item.id);
+        const prevIDs = prevData.map(item => item.id);
+
+        // Find new IDs
+        const newIDs = latestIDs.filter(id => !prevIDs.includes(id));
+
+        // Save the current data for the next check
+        localStorage.setItem("prevTitles", JSON.stringify(latestData));
+
+        // Display the new IDs
+        const lastUpdateTitles = document.getElementById("last-update-titles");
+        if (newIDs.length > 0) {
+            const newLinks = newIDs.map(id => `+<a href="?play=${id}">${id}</a>`).join(" ");
+            lastUpdateTitles.innerHTML = `<br>${newLinks}`;
+        } else {
+            lastUpdateTitles.innerHTML = "<br>No new titles.";
+        }
+    } catch (error) {
+        console.error("Error checking new titles:", error);
+        document.getElementById("last-update-titles").innerHTML = "<br>Error loading new titles.";
+    }
+}
+
+checkNewTitles();
+setInterval(checkNewTitles, 60000 * 5); // Check every 5 minutes
+
+
+
+
 // All RUNTIMES
 fetch("titles.json")
     .then(response => response.json())
