@@ -40,6 +40,8 @@
 
 
 
+
+
 // Check for new title IDs
 const jsonUrl = "https://raw.githubusercontent.com/zrzava/watch/main/titles.json";
 
@@ -75,10 +77,10 @@ async function checkNewTitles() {
         // Display the new IDs
         const lastUpdateTitles = document.getElementById("last-update-titles");
         if (newIDs.length > 0) {
-            const newLinks = newIDs.map(id => `+<a href="?play=${id}">${id}</a>`).join(" ");
-            lastUpdateTitles.innerHTML = `<br>${newLinks}`;
+            const newLinks = newIDs.map(id => `+ <a href="?play=${id}">${id}</a>,`).join(" ");
+            lastUpdateTitles.innerHTML = `${newLinks}`;
         } else {
-            lastUpdateTitles.innerHTML = "<br>No new titles.";
+            lastUpdateTitles.innerHTML = ">Žádno nové tituly.";
         }
     } catch (error) {
         console.error("Error checking new titles:", error);
