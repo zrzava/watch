@@ -15,6 +15,41 @@
       "creator": ["??"]
     },
     {
+      "id": "most-2019",
+      "title": "Most! (2019)",
+      "description": "Hlavního hrdinu Luďka vyhodí z práce kvůli rasistickým poznámkám. V hospodě, kam utíká před svými problémy, Luďka navštíví pošťák Ondra z pořadu Pošta pro tebe. Luděk se rozhodne, že v pořadu přednese hlavní problémy, které obyvatele Mostu trápí. V Poště pro tebe se setká se svou sestrou Dášou, která byla dříve jeho bratr Pavel, a poperou se. Z televize odjíždějí společně a později v noci společně vyhrávají tajný závod. Dáša se nakonec nastěhuje k Luďkovi do jejich domu po otci. ",
+      "labels": ["comedy", "drama", "pub", "small-town", "transgender", "mtf"],
+      "types": ["serie"],
+      "languages": ["czech"],
+      "items": [
+        { "title": "s01e01", "link": "https://online.sktorrent.eu/embed/0056c30eb5241f06bfe9" },
+        { "title": "s01e02", "link": "https://online.sktorrent.eu/embed/d255282de7d11391e1b6" },
+        { "title": "s01e03", "link": "https://online.sktorrent.eu/embed/a482f04dcecde07e27de" },
+        { "title": "s01e04", "link": "https://online.sktorrent.eu/embed/d24a7f09a889483a50e8" },
+        { "title": "s01e05", "link": "https://online.sktorrent.eu/embed/55ceb62d785c6b7f10a8" },
+        { "title": "s01e06", "link": "https://online.sktorrent.eu/embed/8824e5ab0472e022e577" },
+        { "title": "s01e07", "link": "https://online.sktorrent.eu/embed/c984afa0c517ad0d557a" },
+        { "title": "s01e08", "link": "https://online.sktorrent.eu/embed/a602ee2dc0ccab5b7b67" }
+       ],
+      "runtime": "358 min",
+      "imdb": "tt8610916",
+      "creator": ["CzechTV"]
+    },
+    {
+      "id": "the-assignment-2016",
+      "title": "The Assignment (2016)",
+      "description": "Dr. Rachel Jane, bývalá plastická chirurgyně s pokřivenou vizí lepšího světa, po ztrátě licence provádí nelegální operace na bezdomovcích. Když zjistí, že jejího bratra zavraždil zabiják Frank Kitchen, rozhodne se pomstít a zároveň otestovat hranice identity – provede na Frankovi změnu pohlaví. Frank je zděšený, ale po překonání šoku plánuje pomstu a zabíjí všechny, kteří se na jeho operaci podíleli. Nakonec zohaví Jane ruce, aby už nikdy nemohla operovat.",
+      "labels": ["action", "krimi", "thriller", "tomboy", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://online.sktorrent.eu/embed/baf0e86671a5109e2215" }
+       ],
+      "runtime": "95 min",
+      "imdb": "tt5034474",
+      "creator": ["??"]
+    },
+    {
       "id": "tangerine-2015",
       "title": "Tangerine (2015)",
       "description": "Po osmadvaceti dlouhých dnech se Sin-Dee vrací na svou čtvrť. Jsou Vánoce a všichni se snaží naladit na sváteční atmosféru. Sin-Dee však čeká šok – náhodou zjistí, že ji Chester, láska jejího života, podváděl. A to si plánovala společnou budoucnost. Zlomená a ponížená se rozhodne vypátrat nevěrného Chestera a nikdo ji nezastaví – ani její nejlepší kamarádka Alexandra, která se marně snaží být hlasem rozumu. Nic ji nezastaví v hledání spravedlnosti. Koneckonců, kdo by chtěl žít ve lži?",
@@ -67,6 +102,34 @@
       "runtime": "52 min",
       "imdb": "tt3639864",
       "creator": ["Asahi Production"]
+    },
+    {
+      "id": "boys-dont-cry-1999",
+      "title": "Boys Don't Cry (1999)",
+      "description": "Teena Brandonová, děvče z malého městečka, utíká po krádeži auta před spravedlností. Při té příležitosti si změní jméno na Brandon Teena a spolu s tím kompletně změní svou osobnost. Teena má totiž už dlouho pocit, že se narodila ve špatném těle. V obrovských zmatcích, které provázejí její přeměnu se seznamuje s dívkou jménem Lana, která fatálně vstoupí do jejího života. Po krátké romantické známosti se Lena doví celou pravdu - policie totiž zatkne "Brandona" a uvězní ho v ženském oddělení. Vyjevit těžkou pravdu milované osobě je pro Teenu nadlidský úkol, ale ukáže se že pravda její vztah s Lanou neohrozí. Bohužel do situace zasáhne Lanina rodina - která vyrovná účty za "zrazenou Lanu" po svém... Film vznikl na základě skutečných událostí a neskutečně věrohodný herecký výkon vynesl představitelce hlavní role Oscara v roce kdy Cenám Akademie dominovala Americká Krása.",
+      "labels": ["krimi", "drama", "romantic", "tomboy"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://online.sktorrent.eu/embed/ac873f5f421d5880e88d" }
+       ],
+      "runtime": "119 min",
+      "imdb": "tt0171804",
+      "creator": ["??"]
+    },
+    {
+      "id": "tootsie-1982",
+      "title": "Tootsie (1982)",
+      "description": "Neúspěšný herec Michael Dorsey nemůže získat práci kvůli své pověsti náladového herce. Rozhodne se proto vydávat za ženu Dorothy Michaelsovou a získá roli v populárním televizním seriálu. Jako Dorothy se stává miláčkem amerických domácností, ale situace se komplikuje, když se zamiluje do mladé herečky, zatímco její otec se zamiluje do Dorothy. Film je komedií o záměně identit a patří mezi klasiky.",
+      "labels": ["comedy", "romantic", "crossdress"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://online.sktorrent.eu/embed/62c6d7af57c609363291" }
+       ],
+      "runtime": "113 min",
+      "imdb": "tt0084805",
+      "creator": ["??"]
     },
     {
       "id": "glen-or-glenda-1953",
