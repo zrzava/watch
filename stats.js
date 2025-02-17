@@ -79,8 +79,6 @@ async function checkNewTitles() {
         if (newIDs.length > 0) {
             const newLinks = newIDs.map(id => `+ <a href="?play=${id}">${id}</a>,`).join(" ");
             lastUpdateTitles.innerHTML = `${newLinks}`;
-        } else {
-            lastUpdateTitles.innerHTML = ">Žádno nové tituly.";
         }
     } catch (error) {
         console.error("Error checking new titles:", error);
