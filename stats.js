@@ -62,16 +62,23 @@ async function checkNewTitles() {
         // Find new IDs
         const newIDs = latestIDs.filter(id => !prevIDs.includes(id));
 
-        // Save the current data for the next check
-        localStorage.setItem("prevTitles", JSON.stringify(latestData.titles)); // Save 'titles' only
+        // If there are no new titles, just keep the previous ones
+        if (newIDs.length === 0) {
+            localStorage.setItem("prevTitles", JSON.stringify(prevData)); // Keep the existing titles in storage
+        } else {
+            // Add new titles to the existing list
+            const newTitles = latestData.titles.filter(item => newIDs.includes(item.id));
+            const updatedTitles = [...prevData, ...newTitles];
+            localStorage.setItem("prevTitles", JSON.stringify(updatedTitles)); // Save updated titles
+        }
 
         // Display the new IDs
         const lastUpdateTitles = document.getElementById("last-update-titles");
         if (newIDs.length > 0) {
-            const newLinks = newIDs.map(id => `+ <a href="?play=${id}">${id}</a>,`).join(" ");
-            lastUpdateTitles.innerHTML = `${newLinks}`;
+            const newLinks = newIDs.map(id => `+<a href="?play=${id}">${id}</a>`).join(" ");
+            lastUpdateTitles.innerHTML = `<br>${newLinks}`;
         } else {
-            lastUpdateTitles.innerHTML = "Žádné nové tituly.";
+            lastUpdateTitles.innerHTML = "<br>No new titles.";
         }
     } catch (error) {
         console.error("Error checking new titles:", error);
