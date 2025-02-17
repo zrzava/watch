@@ -40,8 +40,6 @@
 
 
 
-
-
 // Check for new title IDs
 const jsonUrl = "https://raw.githubusercontent.com/zrzava/watch/main/titles.json";
 
@@ -49,20 +47,23 @@ async function checkNewTitles() {
     try {
         // Fetch the latest titles.json
         const response = await fetch(jsonUrl);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
         const latestData = await response.json();
 
         // Get previous data from localStorage
         const prevData = JSON.parse(localStorage.getItem("prevTitles")) || [];
 
         // Extract IDs from the current and previous data
-        const latestIDs = latestData.map(item => item.id);
+        const latestIDs = latestData.titles.map(item => item.id); // Corrected to access 'titles'
         const prevIDs = prevData.map(item => item.id);
 
         // Find new IDs
         const newIDs = latestIDs.filter(id => !prevIDs.includes(id));
 
         // Save the current data for the next check
-        localStorage.setItem("prevTitles", JSON.stringify(latestData));
+        localStorage.setItem("prevTitles", JSON.stringify(latestData.titles)); // Save 'titles' only
 
         // Display the new IDs
         const lastUpdateTitles = document.getElementById("last-update-titles");
