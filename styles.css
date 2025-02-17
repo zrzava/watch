@@ -257,7 +257,7 @@ a.hero.yellow:hover {background: #b0891a;}
     transform: scale(1.2); /* Zv�razn�n� p�i najet� */
 }
 
-.copy {
+.menu-stats {
     color: #fff;
     font-size: 0.8rem;
     text-align: center;
