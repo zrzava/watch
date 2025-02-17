@@ -78,7 +78,7 @@ async function checkNewTitles() {
         const lastUpdateTitles = document.getElementById("last-update-titles");
         if (newIDs.length > 0) {
             const newLinks = newIDs.map(id => `+ <a href="?play=${id}">${id}</a>,`).join(" ");
-            lastUpdateTitles.innerHTML = `${newLinks}`;
+            lastUpdateTitles.innerHTML = `<br>${newLinks}`;
         }
     } catch (error) {
         console.error("Error checking new titles:", error);
@@ -88,6 +88,7 @@ async function checkNewTitles() {
 
 checkNewTitles();
 setInterval(checkNewTitles, 60000 * 5); // Check every 5 minutes
+
 
 
 
