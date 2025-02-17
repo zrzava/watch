@@ -75,10 +75,13 @@ async function checkNewTitles() {
         // Display the new IDs
         const lastUpdateTitles = document.getElementById("last-update-titles");
         if (newIDs.length > 0) {
-            const newLinks = newIDs.map((id, index, arr) => 
+            const newLinks = newIDs.map((id, index, arr) =>
                 `+ <a href="?play=${id}">${id}</a>${index < arr.length - 1 ? ',' : ''}`
             ).join(" ");
             lastUpdateTitles.innerHTML = `<br>${newLinks}`;
+        } else {
+            // If there are no new titles, show a message saying so
+            lastUpdateTitles.innerHTML = "<br>No new titles.";
         }
     } catch (error) {
         console.error("Error checking new titles:", error);
@@ -86,6 +89,22 @@ async function checkNewTitles() {
     }
 }
 
+// Show previously saved new titles after page reload
+function showPreviouslySavedTitles() {
+    const prevTitles = JSON.parse(localStorage.getItem("prevTitles")) || [];
+    const lastUpdateTitles = document.getElementById("last-update-titles");
+
+    if (prevTitles.length > 0) {
+        const newLinks = prevTitles.map((item) =>
+            `+ <a href="?play=${item.id}">${item.id}</a>`
+        ).join(" ");
+        lastUpdateTitles.innerHTML = `<br>${newLinks}`;
+    } else {
+        lastUpdateTitles.innerHTML = "<br>No titles available.";
+    }
+}
+
+showPreviouslySavedTitles();
 checkNewTitles();
 setInterval(checkNewTitles, 60000 * 5); // Check every 5 minutes
 
