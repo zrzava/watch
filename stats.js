@@ -40,8 +40,6 @@
 
 
 
-
-
 // Check for new title IDs
 const jsonUrl = "https://raw.githubusercontent.com/zrzava/watch/main/titles.json";
 
@@ -77,7 +75,9 @@ async function checkNewTitles() {
         // Display the new IDs
         const lastUpdateTitles = document.getElementById("last-update-titles");
         if (newIDs.length > 0) {
-            const newLinks = newIDs.map(id => `+ <a href="?play=${id}">${id}</a>,`).join(" ");
+            const newLinks = newIDs.map((id, index, arr) => 
+                `+ <a href="?play=${id}">${id}</a>${index < arr.length - 1 ? ',' : ''}`
+            ).join(" ");
             lastUpdateTitles.innerHTML = `<br>${newLinks}`;
         }
     } catch (error) {
@@ -88,7 +88,6 @@ async function checkNewTitles() {
 
 checkNewTitles();
 setInterval(checkNewTitles, 60000 * 5); // Check every 5 minutes
-
 
 
 
