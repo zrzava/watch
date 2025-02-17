@@ -72,7 +72,7 @@ async function checkNewTitles() {
             localStorage.setItem("prevTitles", JSON.stringify(updatedTitles)); // Save updated titles
         }
 
-        // Display the new IDs
+        // Display the new IDs if any
         const lastUpdateTitles = document.getElementById("last-update-titles");
         if (newIDs.length > 0) {
             const newLinks = newIDs.map((id, index, arr) =>
@@ -80,8 +80,8 @@ async function checkNewTitles() {
             ).join(" ");
             lastUpdateTitles.innerHTML = `<br>${newLinks}`;
         } else {
-            // If there are no new titles, show a message saying so
-            lastUpdateTitles.innerHTML = "<br>No new titles.";
+            // If there are no new titles, display the previously saved titles
+            showPreviouslySavedTitles();
         }
     } catch (error) {
         console.error("Error checking new titles:", error);
@@ -89,7 +89,7 @@ async function checkNewTitles() {
     }
 }
 
-// Show previously saved new titles after page reload
+// Show previously saved titles after page reload
 function showPreviouslySavedTitles() {
     const prevTitles = JSON.parse(localStorage.getItem("prevTitles")) || [];
     const lastUpdateTitles = document.getElementById("last-update-titles");
@@ -104,6 +104,7 @@ function showPreviouslySavedTitles() {
     }
 }
 
+// Initialize: Check new titles and show the list
 showPreviouslySavedTitles();
 checkNewTitles();
 setInterval(checkNewTitles, 60000 * 5); // Check every 5 minutes
