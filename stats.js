@@ -202,8 +202,7 @@ async function loadLatestNews() {
     if (filteredNews.length > 0) {
       const newsHtml = filteredNews.map(news => `
         <div class="menu-news">
-          <p>${news.author} ${news.date}</p>
-          <p>${news.description}</p>
+          <p>${news.description} ${news.date}</p>
         </div>
       `).join("");
 
