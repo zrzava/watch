@@ -96,7 +96,7 @@
                     }
 
                     // Po každých X titulech přidáme reklamní blok
-                    if ((index + 1) % 9 === 0) {
+                    if ((index + 1) % 12 === 0) {
                         tipsHTML += ` 
                             <div class="ad-container" style="margin: 5px; padding: 10px;">
                                 <!-- Kód pro reklamu eTarget -->
