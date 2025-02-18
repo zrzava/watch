@@ -174,11 +174,6 @@ fetch("titles.json")
 
 
 
-// NEWS projektu
-// Nastavení jazyků a počtu novinek
-const languages = ["cs", "en"];
-const newsCount = 1; // Počet posledních novinek, které chceš zobrazit
-
 // Funkce pro načtení a zobrazení posledních novinek
 async function loadLatestNews() {
   try {
@@ -190,6 +185,7 @@ async function loadLatestNews() {
     }
 
     const data = await response.json();
+    console.log("Načtená data:", data); // Přidej log pro zobrazení načtených dat
 
     // Filtrování podle jazyků
     const filteredNews = data.news
@@ -213,6 +209,7 @@ async function loadLatestNews() {
       document.getElementById("menu-news").innerHTML = "<p>Žádné novinky pro tento jazyk.</p>";
     }
   } catch (error) {
+    console.error("Chyba při načítání novinek:", error);
     document.getElementById("menu-news").innerHTML = "<p>Chyba při načítání novinek.</p>";
   }
 }
