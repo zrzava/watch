@@ -114,7 +114,6 @@ setInterval(checkNewTitles, 60000 * 5); // Kontrola každých 5 minut
 
 
 
-
 // All RUNTIMES
 fetch("titles.json")
     .then(response => response.json())
