@@ -184,7 +184,8 @@ const newsCount = 1; // Počet posledních novinek, které chceš zobrazit
 // Funkce pro načtení a zobrazení posledních novinek
 async function loadLatestNews() {
   try {
-    const response = await fetch("https://api.github.com/repos/zrzava/zrzava/contents/news.json");
+    // Načítání souboru news.json ve stejné složce jako skript
+    const response = await fetch("news.json");
 
     if (!response.ok) {
       throw new Error(`HTTP chyba! Status: ${response.status}`);
@@ -192,39 +193,27 @@ async function loadLatestNews() {
 
     const data = await response.json();
 
-    if (data && data.content) {
-      // GitHub vrací obsah souboru v Base64, musíme ho dekódovat
-      const decodedContent = atob(data.content);  // Dekódování Base64
+    // Filtrování podle projektů a jazyků
+    const filteredNews = data.news
+      .filter(item =>
+        projects.includes(item.project) &&
+        languages.includes(item.language)
+      )
+      .sort((a, b) => new Date(b.date) - new Date(a.date)) // Seřazení podle data
+      .slice(0, newsCount); // Výběr posledních novinek
 
-      // Odstranění BOM, pokud je přítomen
-      const cleanedContent = decodedContent.replace(/^\uFEFF/, '');  // Odstranění BOM
+    // Zobrazení novinek v divu
+    if (filteredNews.length > 0) {
+      const newsHtml = filteredNews.map(news => `
+        <div class="news-item">
+          <p>${news.author} ${news.date}</p>
+          <p>${news.description}</p>
+        </div>
+      `).join("");
 
-      const jsonData = JSON.parse(cleanedContent);  // Převod na objekt
-
-      // Filtrování podle projektů a jazyků
-      const filteredNews = jsonData.news
-        .filter(item =>
-          projects.includes(item.project) &&
-          languages.includes(item.language)
-        )
-        .sort((a, b) => new Date(b.date) - new Date(a.date)) // Seřazení podle data
-        .slice(0, newsCount); // Výběr posledních novinek
-
-      // Zobrazení novinek v divu
-      if (filteredNews.length > 0) {
-        const newsHtml = filteredNews.map(news => `
-          <div class="news-item">
-            <p>${news.author} ${news.date}</p>
-            <p>${news.description}</p>
-          </div>
-        `).join("");
-
-        document.getElementById("menu-news").innerHTML = newsHtml;
-      } else {
-        document.getElementById("menu-news").innerHTML = "<p>Žádné novinky pro tyto projekty a jazyky.</p>";
-      }
+      document.getElementById("menu-news").innerHTML = newsHtml;
     } else {
-      throw new Error("Chyba při dekódování souboru.");
+      document.getElementById("menu-news").innerHTML = "<p>Žádné novinky pro tyto projekty a jazyky.</p>";
     }
   } catch (error) {
     console.error("Chyba při načítání novinek:", error);
