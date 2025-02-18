@@ -41,7 +41,6 @@
 
 
 // URL k JSON souboru
-// URL k JSON souboru
 const jsonUrl = "https://raw.githubusercontent.com/zrzava/watch/main/titles.json";
 
 async function checkNewTitles() {
@@ -53,30 +52,26 @@ async function checkNewTitles() {
         }
         const latestData = await response.json();
 
-        // Načtení již zobrazených ID z localStorage
-        const shownIDs = JSON.parse(localStorage.getItem("shownTitles")) || [];
+        // Načtení posledních uložených ID z localStorage
+        const lastFetchedIDs = JSON.parse(localStorage.getItem("lastFetchedIDs")) || [];
 
-        // Extrahování ID z aktuálních dat
+        // Extrakce aktuálních ID z načteného JSONu
         const latestIDs = latestData.titles.map(item => item.id);
 
-        // Filtrace nových ID, která ještě nebyla zobrazena
-        const newIDs = latestIDs.filter(id => !shownIDs.includes(id));
+        // Filtrace nových ID, která ještě nebyla v posledním JSONu
+        const newIDs = latestIDs.filter(id => !lastFetchedIDs.includes(id));
 
-        // Pokud jsou nová ID, zobrazí se a uloží jako poslední zobrazená
+        // Pokud jsou nová ID, zobrazí je na stránce
         if (newIDs.length > 0) {
             const newTitles = latestData.titles.filter(item => newIDs.includes(item.id));
             displayNewTitles(newTitles);
-
-            // Uložení pouze posledních zobrazených titulů
-            localStorage.setItem("lastShownTitles", JSON.stringify(newTitles));
-
-            // Aktualizace uložených ID - přidají se nová zobrazená
-            const updatedShownIDs = [...shownIDs, ...newIDs];
-            localStorage.setItem("shownTitles", JSON.stringify(updatedShownIDs));
         } else {
-            // Pokud nejsou žádné nové tituly, zobrazí se naposledy uložené tituly
-            showLastShownTitles();
+            document.getElementById("last-update-titles").innerHTML = "<br>No new titles.";
         }
+
+        // Uložení aktuálních ID jako posledně načtených
+        localStorage.setItem("lastFetchedIDs", JSON.stringify(latestIDs));
+
     } catch (error) {
         console.error("Error checking new titles:", error);
         document.getElementById("last-update-titles").innerHTML = "<br>Error loading new titles.";
@@ -92,25 +87,10 @@ function displayNewTitles(titles) {
     lastUpdateTitles.innerHTML = `<br>${newLinks}`;
 }
 
-// Funkce pro zobrazení posledních zobrazených titulů po aktualizaci stránky
-function showLastShownTitles() {
-    const lastShownTitles = JSON.parse(localStorage.getItem("lastShownTitles")) || [];
-    const lastUpdateTitles = document.getElementById("last-update-titles");
-
-    if (lastShownTitles.length > 0) {
-        const newLinks = lastShownTitles.map(item =>
-            `+ <a href="?play=${item.id}">${item.id}</a>`
-        ).join(" ");
-        lastUpdateTitles.innerHTML = `<br>${newLinks}`;
-    } else {
-        lastUpdateTitles.innerHTML = "<br>No new titles.";
-    }
-}
-
-// Inicializace: Zobrazení posledních zobrazených titulů
-showLastShownTitles();
+// Inicializace: Zkontroluje nové tituly
 checkNewTitles();
 setInterval(checkNewTitles, 60000 * 5); // Kontrola každých 5 minut
+
 
 
 
