@@ -40,13 +40,16 @@
 
 
 
-// URL k JSON souboru
+// URL k JSON souboru s cache busting parametrem
 const jsonUrl = "https://raw.githubusercontent.com/zrzava/watch/main/titles.json";
 
 async function checkNewTitles() {
     try {
+        // Přidání náhodného parametru k URL, aby se vždy načetla aktuální verze JSONu
+        const urlWithTimestamp = `${jsonUrl}?t=${Date.now()}`;
+        
         // Načtení aktuálních dat z JSON
-        const response = await fetch(jsonUrl);
+        const response = await fetch(urlWithTimestamp);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -90,6 +93,7 @@ function displayNewTitles(titles) {
 // Inicializace: Zkontroluje nové tituly
 checkNewTitles();
 setInterval(checkNewTitles, 60000 * 5); // Kontrola každých 5 minut
+
 
 
 
