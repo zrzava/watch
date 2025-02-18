@@ -68,6 +68,9 @@ async function checkNewTitles() {
         if (newIDs.length > 0) {
             const newTitles = latestData.titles.filter(item => newIDs.includes(item.id));
             displayNewTitles(newTitles);
+
+            // Uložení zobrazených titulů do localStorage
+            localStorage.setItem("lastFetchedTitles", JSON.stringify(newTitles));
         } else {
             document.getElementById("last-update-titles").innerHTML = "<br>No new titles.";
         }
@@ -90,9 +93,26 @@ function displayNewTitles(titles) {
     lastUpdateTitles.innerHTML = `<br>${newLinks}`;
 }
 
+// Funkce pro zobrazení posledních zobrazených titulů po obnovení stránky
+function showPreviouslyDisplayedTitles() {
+    const lastFetchedTitles = JSON.parse(localStorage.getItem("lastFetchedTitles")) || [];
+    const lastUpdateTitles = document.getElementById("last-update-titles");
+
+    if (lastFetchedTitles.length > 0) {
+        const newLinks = lastFetchedTitles.map(item =>
+            `+ <a href="?play=${item.id}">${item.id}</a>`
+        ).join(" ");
+        lastUpdateTitles.innerHTML = `<br>${newLinks}`;
+    } else {
+        lastUpdateTitles.innerHTML = "<br>No titles available.";
+    }
+}
+
 // Inicializace: Zkontroluje nové tituly
+showPreviouslyDisplayedTitles();
 checkNewTitles();
 setInterval(checkNewTitles, 60000 * 5); // Kontrola každých 5 minut
+
 
 
 
