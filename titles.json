@@ -104,6 +104,20 @@
       "creator": ["Asahi Production"]
     },
     {
+      "id": "tomboy-2011",
+      "title": "Tomboy (2011)",
+      "description": "Tomboy je označení pro děvče, které se chová jako chlapec a snaží se mít vlastnosti typické pro kluky, např. klukovské oblékání a hry spojované spíše s chlapci – fotbal a podobně. Desetiletá Laura se s rodiči a mladší sestrou přestěhovala do nového bytu v příjemném prostředí nedaleko Paříže. V šortkách, sportovním tričku a s nakrátko ostříhanými vlasy je k nerozeznání od kluka. Začínají letní prázdniny a Laura se pomalu seznamuje s novými kamarády...",
+      "labels": ["drama", "tomboy"],
+      "types": ["movie"],
+      "languages": ["french", "cs-subs"],
+      "items": [
+        { "title": "movie", "link": "https://drive.google.com/file/d/1RnmVtEFVPlzhDxXGIo2G9eMdWZ9li6e1/preview" }
+       ],
+      "runtime": "84 min",
+      "imdb": "tt1847731",
+      "creator": ["??"]
+    },
+    {
       "id": "boys-dont-cry-1999",
       "title": "Boys Don't Cry (1999)",
       "description": "Teena Brandonová, děvče z malého městečka, utíká po krádeži auta před spravedlností. Při té příležitosti si změní jméno na Brandon Teena a spolu s tím kompletně změní svou osobnost. Teena má totiž už dlouho pocit, že se narodila ve špatném těle. V obrovských zmatcích, které provázejí její přeměnu se seznamuje s dívkou jménem Lana, která fatálně vstoupí do jejího života. Po krátké romantické známosti se Lena doví celou pravdu - policie totiž zatkne Brandona a uvězní ho v ženském oddělení. Vyjevit těžkou pravdu milované osobě je pro Teenu nadlidský úkol, ale ukáže se že pravda její vztah s Lanou neohrozí. Bohužel do situace zasáhne Lanina rodina - která vyrovná účty za zrazenou Lanu po svém... Film vznikl na základě skutečných událostí a neskutečně věrohodný herecký výkon vynesl představitelce hlavní role Oscara v roce kdy Cenám Akademie dominovala Americká Krása.",      "labels": ["krimi", "drama", "romantic", "tomboy"],
