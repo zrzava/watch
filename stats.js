@@ -41,6 +41,7 @@
 
 
 // URL k JSON souboru
+// URL k JSON souboru
 const jsonUrl = "https://raw.githubusercontent.com/zrzava/watch/main/titles.json";
 
 async function checkNewTitles() {
