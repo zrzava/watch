@@ -200,9 +200,7 @@ fetch("titles.json")
       if (filteredNews.length > 0) {
         const newsHtml = filteredNews.map(news => `
           <div class="news-item">
-            <h2>Novinka</h2>
-            <p><strong>Datum:</strong> ${news.date}</p>
-            <p><strong>Autor:</strong> ${news.author}</p>
+            <p>${news.author} ${news.date}</p>
             <p>${news.description}</p>
           </div>
         `).join("");
