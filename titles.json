@@ -18,7 +18,7 @@
       "id": "most-2019",
       "title": "Most! (2019)",
       "description": "Hlavního hrdinu Luďka vyhodí z práce kvůli rasistickým poznámkám. V hospodě, kam utíká před svými problémy, Luďka navštíví pošťák Ondra z pořadu Pošta pro tebe. Luděk se rozhodne, že v pořadu přednese hlavní problémy, které obyvatele Mostu trápí. V Poště pro tebe se setká se svou sestrou Dášou, která byla dříve jeho bratr Pavel, a poperou se. Z televize odjíždějí společně a později v noci společně vyhrávají tajný závod. Dáša se nakonec nastěhuje k Luďkovi do jejich domu po otci. ",
-      "labels": ["comedy", "drama", "pub", "small-town", "transgender", "mtf"],
+      "labels": ["comedy", "pub", "small-town", "transgender", "mtf"],
       "types": ["serie"],
       "languages": ["czech"],
       "items": [
@@ -62,6 +62,20 @@
       "runtime": "95 min",
       "imdb": "tt5034474",
       "creator": ["??"]
+    },
+    {
+      "id": "the-danish-girl-2015",
+      "title": "The Danish Girl (2015)",
+      "description": "Ve 20. letech 20. století v Kodani požádá portrétní malířka Gerda Wegener svého manžela Einara, známého krajináře a uzavřenou trans ženu, aby se postavil za model pro její obraz. Tato zkušenost vyvolá v Einarovi touhu přiznat svou transidentitu a přejít na jméno Lili. Lili a Gerda se přestěhují do Paříže, kde Lili začíná podstupovat experimentální operaci změny pohlaví.",
+      "labels": ["drama", "romantic", "true-story", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["english", "cs-subs"],
+      "items": [
+        { "title": "movie", "link": "https://drive.google.com/file/d/1Dt9pgs8fZbD--7fUGzhn-BSYTCFzjfxe/preview" }
+       ],
+      "runtime": "119 min",
+      "imdb": "tt0810819",
+      "creator": ["Universal Pictures"]
     },
     {
       "id": "tangerine-2015",
@@ -135,6 +149,7 @@
       "id": "boys-dont-cry-1999",
       "title": "Boys Don't Cry (1999)",
       "description": "Teena Brandonová, děvče z malého městečka, utíká po krádeži auta před spravedlností. Při té příležitosti si změní jméno na Brandon Teena a spolu s tím kompletně změní svou osobnost. Teena má totiž už dlouho pocit, že se narodila ve špatném těle. V obrovských zmatcích, které provázejí její přeměnu se seznamuje s dívkou jménem Lana, která fatálně vstoupí do jejího života. Po krátké romantické známosti se Lena doví celou pravdu - policie totiž zatkne Brandona a uvězní ho v ženském oddělení. Vyjevit těžkou pravdu milované osobě je pro Teenu nadlidský úkol, ale ukáže se že pravda její vztah s Lanou neohrozí. Bohužel do situace zasáhne Lanina rodina - která vyrovná účty za zrazenou Lanu po svém... Film vznikl na základě skutečných událostí a neskutečně věrohodný herecký výkon vynesl představitelce hlavní role Oscara v roce kdy Cenám Akademie dominovala Americká Krása.",      "labels": ["krimi", "drama", "romantic", "tomboy"],
+      "labels": ["krimi", "drama", "romantic", "tomboy"],
       "types": ["movie"],
       "languages": ["cs-dab"],
       "items": [
@@ -162,7 +177,7 @@
       "id": "glen-or-glenda-1953",
       "title": "Glen or Glenda (1953)",
       "description": "Policejní inspektor vyšetřuje sebevraždu Patricka/Patricie a konzultuje případ s doktorem Altonem, který mu vypráví příběh Glena/Glendy. Glen je transvestita, ale není homosexuál, a svou identitu skrývá před svou snoubenkou Barbarou. Rozpolcený mezi upřímností a strachem má sny o svém vnitřním konfliktu. Nakonec se Barbarě přizná a ta ho přijme. Dr. Alton také vypráví příběh Alana, válečného veterána z druhé světové války, který se prostřednictvím operace změnil v Anne.",
-      "labels": ["documentary", "drama", "crossdress"],
+      "labels": ["documentary", "drama", "krimi", "true-story", "crossdress"],
       "types": ["movie"],
       "languages": ["english"],
       "items": [
