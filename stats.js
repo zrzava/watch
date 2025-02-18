@@ -40,48 +40,41 @@
 
 
 
-// Check for new title IDs
+// URL k JSON souboru
 const jsonUrl = "https://raw.githubusercontent.com/zrzava/watch/main/titles.json";
 
 async function checkNewTitles() {
     try {
-        // Fetch the latest titles.json
+        // Načtení aktuálních dat z JSON
         const response = await fetch(jsonUrl);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         const latestData = await response.json();
 
-        // Get previous data from localStorage
-        const prevData = JSON.parse(localStorage.getItem("prevTitles")) || [];
+        // Načtení již zobrazených ID z localStorage
+        const shownIDs = JSON.parse(localStorage.getItem("shownTitles")) || [];
 
-        // Extract IDs from the current and previous data
-        const latestIDs = latestData.titles.map(item => item.id); // Corrected to access 'titles'
-        const prevIDs = prevData.map(item => item.id);
+        // Extrahování ID z aktuálních dat
+        const latestIDs = latestData.titles.map(item => item.id);
 
-        // Find new IDs
-        const newIDs = latestIDs.filter(id => !prevIDs.includes(id));
+        // Filtrace nových ID, která ještě nebyla zobrazena
+        const newIDs = latestIDs.filter(id => !shownIDs.includes(id));
 
-        // If there are no new titles, just keep the previous ones
-        if (newIDs.length === 0) {
-            localStorage.setItem("prevTitles", JSON.stringify(prevData)); // Keep the existing titles in storage
-        } else {
-            // Add new titles to the existing list
-            const newTitles = latestData.titles.filter(item => newIDs.includes(item.id));
-            const updatedTitles = [...prevData, ...newTitles];
-            localStorage.setItem("prevTitles", JSON.stringify(updatedTitles)); // Save updated titles
-        }
-
-        // Display the new IDs if any
-        const lastUpdateTitles = document.getElementById("last-update-titles");
+        // Pokud jsou nová ID, zobrazí se a uloží jako zobrazená
         if (newIDs.length > 0) {
-            const newLinks = newIDs.map((id, index, arr) =>
-                `+ <a href="?play=${id}">${id}</a>${index < arr.length - 1 ? ',' : ''}`
-            ).join(" ");
-            lastUpdateTitles.innerHTML = `<br>${newLinks}`;
+            const newTitles = latestData.titles.filter(item => newIDs.includes(item.id));
+            displayNewTitles(newTitles);
+
+            // Aktualizace uložených ID - přidají se nová zobrazená
+            const updatedShownIDs = [...shownIDs, ...newIDs];
+            localStorage.setItem("shownTitles", JSON.stringify(updatedShownIDs));
+
+            // Uložení posledních zobrazených titulů
+            localStorage.setItem("lastShownTitles", JSON.stringify(newTitles));
         } else {
-            // If there are no new titles, display the previously saved titles
-            showPreviouslySavedTitles();
+            // Pokud nejsou žádné nové tituly, zobrazí se naposledy uložené tituly
+            showLastShownTitles();
         }
     } catch (error) {
         console.error("Error checking new titles:", error);
@@ -89,25 +82,35 @@ async function checkNewTitles() {
     }
 }
 
-// Show previously saved titles after page reload
-function showPreviouslySavedTitles() {
-    const prevTitles = JSON.parse(localStorage.getItem("prevTitles")) || [];
+// Funkce pro zobrazení nových titulů na stránce
+function displayNewTitles(titles) {
+    const lastUpdateTitles = document.getElementById("last-update-titles");
+    const newLinks = titles.map(item =>
+        `+ <a href="?play=${item.id}">${item.id}</a>`
+    ).join(" ");
+    lastUpdateTitles.innerHTML = `<br>${newLinks}`;
+}
+
+// Funkce pro zobrazení posledních zobrazených titulů po aktualizaci stránky
+function showLastShownTitles() {
+    const lastShownTitles = JSON.parse(localStorage.getItem("lastShownTitles")) || [];
     const lastUpdateTitles = document.getElementById("last-update-titles");
 
-    if (prevTitles.length > 0) {
-        const newLinks = prevTitles.map((item) =>
+    if (lastShownTitles.length > 0) {
+        const newLinks = lastShownTitles.map(item =>
             `+ <a href="?play=${item.id}">${item.id}</a>`
         ).join(" ");
         lastUpdateTitles.innerHTML = `<br>${newLinks}`;
     } else {
-        lastUpdateTitles.innerHTML = "<br>No titles available.";
+        lastUpdateTitles.innerHTML = "<br>No new titles.";
     }
 }
 
-// Initialize: Check new titles and show the list
-showPreviouslySavedTitles();
+// Inicializace: Zobrazení posledních zobrazených titulů
+showLastShownTitles();
 checkNewTitles();
-setInterval(checkNewTitles, 60000 * 5); // Check every 5 minutes
+setInterval(checkNewTitles, 60000 * 5); // Kontrola každých 5 minut
+
 
 
 
