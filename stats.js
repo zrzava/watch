@@ -174,10 +174,8 @@ fetch("titles.json")
 
 
 
-
 // NEWS projektu
-// Nastavení projektů, jazyků a počtu novinek
-const projects = ["watch", "sissyshare"];
+// Nastavení jazyků a počtu novinek
 const languages = ["cs", "en"];
 const newsCount = 1; // Počet posledních novinek, které chceš zobrazit
 
@@ -193,11 +191,10 @@ async function loadLatestNews() {
 
     const data = await response.json();
 
-    // Filtrování podle projektů a jazyků
+    // Filtrování podle jazyků
     const filteredNews = data.news
       .filter(item =>
-        projects.includes(item.project) &&
-        languages.includes(item.language)
+        languages.includes(item.language) // Filtrace pouze podle jazyka
       )
       .sort((a, b) => new Date(b.date) - new Date(a.date)) // Seřazení podle data
       .slice(0, newsCount); // Výběr posledních novinek
@@ -205,7 +202,7 @@ async function loadLatestNews() {
     // Zobrazení novinek v divu
     if (filteredNews.length > 0) {
       const newsHtml = filteredNews.map(news => `
-        <div class="news-item">
+        <div class="menu-news">
           <p>${news.author} ${news.date}</p>
           <p>${news.description}</p>
         </div>
@@ -213,10 +210,9 @@ async function loadLatestNews() {
 
       document.getElementById("menu-news").innerHTML = newsHtml;
     } else {
-      document.getElementById("menu-news").innerHTML = "<p>Žádné novinky pro tyto projekty a jazyky.</p>";
+      document.getElementById("menu-news").innerHTML = "<p>Žádné novinky pro tento jazyk.</p>";
     }
   } catch (error) {
-    console.error("Chyba při načítání novinek:", error);
     document.getElementById("menu-news").innerHTML = "<p>Chyba při načítání novinek.</p>";
   }
 }
