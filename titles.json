@@ -36,6 +36,20 @@
       "creator": ["CzechTV"]
     },
     {
+      "id": "girl-2018",
+      "title": "Girl (2018)",
+      "description": "Lara je trans dívka, která se narodila s tělem a jménem chlapce. Podstupuje hormonální a chirurgické procedury, které z ní udělají ženu. Zároveň se zapisuje na prestižní baletní školu, kde si chce splnit sen a stát se tanečnicí. Jeden z nejsilnějších motivů Dívky, od kterého režisér Lukas Dhont od začátku do konce neuhýbá, je ten, že všichni z Lařina okolí, ať už doma či ve škole, plně podporují její touhy a snahy. Její rodina se přestěhovala do jiného města, aby Lara mohla chodit na baletní školu, její učitelé k ní přistupují úplně stejně jako ke všem ostatním studentům a studentkám, její otec pečlivě sleduje léčbu a doprovází ji na schůzky s lékaři a pokládá konstruktivní otázky. Síla filmu z velké části vychází z drsné pravdy: všechna tato podpora Laře proměnu nijak neusnadňuje. Jen zabraňuje tomu, aby byla horší, než je.",
+      "labels": ["drama", "school", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["french", "flemish", "cs-subs"],
+      "items": [
+        { "title": "movie", "link": "https://drive.google.com/file/d/1Ekiwu4GRCvDIEIRQI0Ay9DSIcsNqr0z1/preview" }
+       ],
+      "runtime": "105 min",
+      "imdb": "tt8254556",
+      "creator": ["??"]
+    },
+    {
       "id": "the-assignment-2016",
       "title": "The Assignment (2016)",
       "description": "Dr. Rachel Jane, bývalá plastická chirurgyně s pokřivenou vizí lepšího světa, po ztrátě licence provádí nelegální operace na bezdomovcích. Když zjistí, že jejího bratra zavraždil zabiják Frank Kitchen, rozhodne se pomstít a zároveň otestovat hranice identity – provede na Frankovi změnu pohlaví. Frank je zděšený, ale po překonání šoku plánuje pomstu a zabíjí všechny, kteří se na jeho operaci podíleli. Nakonec zohaví Jane ruce, aby už nikdy nemohla operovat.",
