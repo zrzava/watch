@@ -69,13 +69,14 @@ async function checkNewTitles() {
             const newTitles = latestData.titles.filter(item => newIDs.includes(item.id));
             displayNewTitles(newTitles);
 
-            // Uložení zobrazených titulů do localStorage
+            // Uložení nových titulů do localStorage, aby byly dostupné po reloadu
             localStorage.setItem("lastFetchedTitles", JSON.stringify(newTitles));
         } else {
-            document.getElementById("last-update-titles").innerHTML = "<br>No new titles.";
+            // Pokud nejsou nové tituly, stále zobrazíme poslední zobrazené
+            showPreviouslyDisplayedTitles();
         }
 
-        // Uložení aktuálních ID jako posledně načtených
+        // Uložení aktuálních ID jako posledně načtených pro porovnání v další iteraci
         localStorage.setItem("lastFetchedIDs", JSON.stringify(latestIDs));
 
     } catch (error) {
@@ -112,8 +113,6 @@ function showPreviouslyDisplayedTitles() {
 showPreviouslyDisplayedTitles();
 checkNewTitles();
 setInterval(checkNewTitles, 60000 * 5); // Kontrola každých 5 minut
-
-
 
 
 
