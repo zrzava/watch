@@ -27,7 +27,7 @@
                     if (title) {
                         tipsContainer.innerHTML = `
                             <div class="title-details">
-                                <h1>${title.title-cs} / ${title.title}</h1>
+                                <h1>${title.title}</h1>
                                 <div class="image">
                                     <img src="img/title/cover/${title.id}.webp" onerror="this.src='img/title/cover/default.webp';" alt="${title.title}">
                                 </div>
@@ -80,7 +80,7 @@
                                     <img src="img/title/cover/${title.id}.webp" onerror="this.src='img/title/cover/default.webp';" alt="${title.title}">
                                 </div>
                                 <div class="info">
-                                    <div class="title">${title.title-cs} / ${title.title}</div>
+                                    <div class="title">${title.title}</div>
                                     <div class="description">${title.description}</div>
                                 </div>
                             </a>
