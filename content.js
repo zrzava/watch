@@ -80,7 +80,7 @@
                                     <img src="img/title/cover/${title.id}.webp" onerror="this.src='img/title/cover/default.webp';" alt="${title.title}">
                                 </div>
                                 <div class="info">
-                                    <div class="title">${title.title}</div>
+                                    <div class="title">${title.title-cs} / ${title.title}</div>
                                     <div class="description">${title.description}</div>
                                 </div>
                             </a>
@@ -207,7 +207,7 @@ let similarTitles = data.titles
             let generatedHtml = `
             <div class="section item">
                 <div class="section-content item-text">
-                    <h1>${titleData.title}</h1>
+                    <h1>${titleData.title-cs} / ${titleData.title}</h1>
                     <div id="tabs">
                         <a href="#" class="active" onclick="showTab(event, 'summary')">Shrnutí</a>
                         ${episodesHTML}
