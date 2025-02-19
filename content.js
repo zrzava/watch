@@ -27,7 +27,7 @@
                     if (title) {
                         tipsContainer.innerHTML = `
                             <div class="title-details">
-                                <h1>${title.title}</h1>
+                                <h1>${title.title-cs} / ${title.title}</h1>
                                 <div class="image">
                                     <img src="img/title/cover/${title.id}.webp" onerror="this.src='img/title/cover/default.webp';" alt="${title.title}">
                                 </div>
@@ -207,7 +207,7 @@ let similarTitles = data.titles
             let generatedHtml = `
             <div class="section item">
                 <div class="section-content item-text">
-                    <h1>${titleData.title-cs} / ${titleData.title}</h1>
+                    <h1>${titleData.title}</h1>
                     <div id="tabs">
                         <a href="#" class="active" onclick="showTab(event, 'summary')">Shrnutí</a>
                         ${episodesHTML}
