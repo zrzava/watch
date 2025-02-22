@@ -133,6 +133,21 @@
       "creator": ["Asahi Production"]
     },
     {
+      "id": "dallas-buyers-club-2013",
+      "title": "Dallas Buyers Club (2013)",
+      "title-cs": "Klub poslední naděje",
+      "description": "Píše se rok 1985. Elektrikář a příležitostný jezdec rodea Ron Woodroof se od lékařů dozvídá, že má AIDS a že mu nezbývá více než 30 dnů života. Doktoři si s tehdy novou smrtelnou nemocí nevědí rady a tak Ronovi víceméně dokážou poradit jediné – pošlou jej domů umřít. Ale Ron to nevzdává, pouští se do bitvy o svůj život s lékaři, farmaceutickými firmami, úředníky a hledá cestu jak přežít. Vyráží do Mexika, ale nehledá tam drogové bosse, hledá alternativní možnosti léčby AIDS a jeho šancí se tak stane mezinárodní černý trh s neschválenými léky. A protože nemá jinou možnost ani co ztratit, začne tyto léky pašovat přes hranice do USA. Zvláštního spojence Ron najde v Rayonovi (Jared Leto), transsexuálovi, který má stejnou touhu po životě i stejnou diagnózu. Naštěstí Rayon sdílí Ronova podnikatelského ducha a tak spolu začnou hledat cestu, jak se vyhnout vládním sankcím namířeným proti prodeji neschválených léků. Nakonec založí Dallas Buyers Club, který funguje na principu, kdy nemocní lidé platí měsíční členské příspěvky a za to získají přístup k zásobám nových a především neoficiálních léků. Takto vzniklá komunita stejně postižených a často zoufalých lidí se rychle rozrůstá a sílí. Ron už není jen pašerákem léků, stává se i bojovníkem za důstojnost, vzdělání a společenské přijetí HIV pozitivních lidí. A tak díky své snaze o přežití Ron žije naplno jako nikdy předtím, v čase, kdy již měl být spolehlivě a dávno mrtvý. Film Klub poslední naděje je inspirován skutečnými událostmi.",
+      "labels": ["drama", "true-story", "biography", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://online.sktorrent.eu/embed/4940fccc597021f79d62" }
+       ],
+      "runtime": "117 min",
+      "imdb": "tt0790636",
+      "creator": ["Voltage Pictures"]
+    },
+    {
       "id": "tomboy-2011",
       "title": "Tomboy (2011)",
       "description": "Tomboy je označení pro děvče, které se chová jako chlapec a snaží se mít vlastnosti typické pro kluky, např. klukovské oblékání a hry spojované spíše s chlapci – fotbal a podobně. Desetiletá Laura se s rodiči a mladší sestrou přestěhovala do nového bytu v příjemném prostředí nedaleko Paříže. V šortkách, sportovním tričku a s nakrátko ostříhanými vlasy je k nerozeznání od kluka. Začínají letní prázdniny a Laura se pomalu seznamuje s novými kamarády...",
@@ -236,6 +251,21 @@
       "creator": ["??"]
     },
     {
+      "id": "the-birdcage-1996",
+      "title": "The Birdcage (1996)",
+      "title-cs": "Ptačí klec",
+      "description": "Ptačí klec. Armando Goldman, majitel travesti klubu v South Beach, a jeho partner Albert, hlavní hvězdě klubu. Jejich poklidný život naruší Armandův syn Val, který oznámí zasnoubení s Barbarou, jejíž otec, konzervativní senátor Kevin Keeley, chce utajit skandál. Aby zapůsobili na Kevina, předstírají Valova rodina „tradiční“ domácnost. Situace se komplikuje, když Albert předstírá Valovu matku. Nakonec všichni přijmou pravdu a v přestrojení uniknou novinářům.",
+      "labels": ["comedy", "drama", "drag-queen", "crossdress"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://online.sktorrent.eu/embed/59ca8d73b89068f53e44" }
+       ],
+      "runtime": "117 min",
+      "imdb": "tt0115685",
+      "creator": ["MGM"]
+    },
+    {
       "id": "mrs-doubtfire-1993",
       "title": "Mrs. Doubtfire (1993)",
       "title-cs": "Táta v sukni",
@@ -263,6 +293,21 @@
       "runtime": "113 min",
       "imdb": "tt0084805",
       "creator": ["??"]
+    },
+    {
+      "id": "some-like-it-hot-1959",
+      "title": "Some Like It Hot (1959)",
+      "title-cs": "Někdo to rád horké",
+      "description": "Slavná kombinace hudební komedie, parodie na gangsterské filmy a bláznivé crazy komedie, se odehrává v roce 1929 a jejími hrdiny jsou Joe a Jerry, dva muzikanti, kteří se na útěku před bandou gangsterů převléknou za ženy a ukryjí se v dívčím orchestru Sladké Zuzi odjíždějícím na turné na Floridu. Seznámí se zpěvačkou Pusinkou Kovalczykovou, do níž se Joe zamiluje, ale sami se brzy stávají, stejně jako ostatní dívky, terčem pozornosti mužů. Zatímco o Joea alias Josefinu se zajímá mladičký hotelový poslíček Bellhop, k Dafne se přilepí obstarožní a neodbytný milionář Osgood Felding. Začíná řada neuvěřitelných zápletek, záměn, omylů a vtipných dialogů s břitkými narážkami, často řádně dvojsmyslnými.",
+      "labels": ["comedy", "krimi", "romantic", "musical", "crossdress"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://online.sktorrent.eu/embed/2e9aca1df90ef35b587e" }
+       ],
+      "runtime": "120 min",
+      "imdb": "tt0053291",
+      "creator": ["United Artists"]
     },
     {
       "id": "glen-or-glenda-1953",
