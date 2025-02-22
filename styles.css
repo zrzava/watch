@@ -307,7 +307,7 @@ footer a:hover {
     display: flex-start;
     justify-content: center;
     align-items: flex-start; /* Uprav�me na flex-start pro lep�� pozicov�n� */
-    min-height: 100vh;
+    min-height: 1005px;
     padding: 15px;
     position: relative;
     text-align: center;
