@@ -1,6 +1,30 @@
 {
   "titles": [
     {
+      "id": "aj-and-the-queen-2020",
+      "title": "AJ and the Queen (2020)",
+      "title-cs": "AJ a královna",
+      "description": "RuPaul ztvárnil v tomto osvěžujícím seriálu roli neúspěšné drag queen cestující po Americe v dodávce s jedenáctiletým pasažérem, který vede silácké řeči.",
+      "labels": ["comedy", "road-movie", "drag-queen", "crossdress"],
+      "types": ["serie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "s01e01", "link": "https://online.sktorrent.eu/embed/a421d5ce262b093bdab2" },
+        { "title": "s01e02", "link": "https://online.sktorrent.eu/embed/04bc593ad9dcf2ec88dd" },
+        { "title": "s01e03", "link": "https://online.sktorrent.eu/embed/f9a0e5b043f63d43fc06" },
+        { "title": "s01e04", "link": "https://online.sktorrent.eu/embed/d02f282a11ea1e322a96" },
+        { "title": "s01e05", "link": "https://online.sktorrent.eu/embed/a303a2d85dbc6f37483e" },
+        { "title": "s01e06", "link": "https://online.sktorrent.eu/embed/5d63ceb1db43c60db7bb" },
+        { "title": "s01e07", "link": "https://online.sktorrent.eu/embed/b067421f6aa89d4a8990" },
+        { "title": "s01e08", "link": "https://online.sktorrent.eu/embed/5e28b3f30b2dda4f5569" },
+        { "title": "s01e09", "link": "https://online.sktorrent.eu/embed/5b9d65d80e25eb862e67" },
+        { "title": "s01e10", "link": "https://online.sktorrent.eu/embed/7eef66324b432b748d15" }
+       ],
+      "runtime": "522 min",
+      "imdb": "tt8404094",
+      "creator": ["MPK Productions, RuCo, Warner Bros."]
+    },
+    {
       "id": "lola-2019",
       "title": "Lola (2019)",
       "description": "Lola, osmnáctiletá dívka s odbarvenými blond vlasy, žije v pěstounském domově se svým jediným přítelem Samirem. Impulzivní a osamělá, snaží se získat diplom veterinární asistentky. Když její matka zemře, otec Philippe se postará o to, aby Lola zmeškala pohřeb. Před dvěma lety ji totiž vyhodil z rodinného domu – tehdy byla ještě Lionelem. Philippe je odhodlaný splnit poslední přání Catherine: rozptýlit její popel v dunách u Severního moře, kde prožila dětství. Lola na něj cítí velkou zlost, ale nechce nechat matku na její poslední cestě samotnou. Neochotně tak vyrážejí na cestu společně.",
@@ -177,6 +201,21 @@
       "creator": ["20th Century Fox"]
     },
     {
+      "id": "peacock-2010",
+      "title": "Peacock (2010)",
+      "title-cs": "Městečko Peacock",
+      "description": "Hlavní hrdina John vytváří kolem svojí postavy podivnou fantasmagorii - on sám i obyvatelé nebraského městečka Peacock sledují osudy muže a jeho manželky, netuše, že se jedná o jednoho člověka. Příchod ženy z jeho minulosti po nehodě vlaku na Johnově zahradě jenom rozvíří temné vody jeho podvědomí.",
+      "labels": ["drama", "psycho", "thriller", "small-town", "crossdress"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://www.youtube.com/embed/P8meDRLQAM0?si=STOJNxw_zL4BkxzR" }
+       ],
+      "runtime": "87 min",
+      "imdb": "tt1188113",
+      "creator": ["Mandate Pictures"]
+    },
+    {
       "id": "big-mommas-house-2-2006",
       "title": "Big Momma's House 2 (2006)",
       "title-cs": "Agent v sukni 2",
@@ -190,6 +229,21 @@
       "runtime": "94 min",
       "imdb": "tt0421729",
       "creator": ["20th Century Fox"]
+    },
+    {
+      "id": "transamerica-2005",
+      "title": "Transamerica (2005)",
+      "title-cs": "Transamerika",
+      "description": "Transexuál Bree šetří každý dolar, aby mohl zaplatit za vytouženou operaci, která z něj konečně udělá ženu. Jednoho dne zvedne telefon a dozvídá se, že jeho syn Toby sedí ve vězení v New Yorku. Neochotně se tedy vydává no New Yorku dostat kluka z vězení. Syna mu předají beze slova vysvětlení a Toby považuje tu divnou ženskou za potrhlou misionářku. Bree nevidí důvod, proč něco vysvětlovat a Toby chce co nejdříve zmizet do Los Angeles. Rozhodnou se tedy, že pojedou spolu, přičemž Bree má v plánu vysadit Tobyho u pěstounů. Začíná trans-americká cesta, která oběma připraví nejedno překvapení.",
+      "labels": ["comedy", "drama", "adventure", "road-movie", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://www.youtube.com/embed/DmoQsVWg4jc?si=LsT3vtumqGE3IGl8" }
+       ],
+      "runtime": "103 min",
+      "imdb": "tt0407265",
+      "creator": ["Belladonna Productions"]
     },
     {
       "id": "kinky-boots-2005",
@@ -220,6 +274,36 @@
       "runtime": "97 min",
       "imdb": "tt0381707",
       "creator": ["Columbia Pictures"]
+    },
+    {
+      "id": "soldiers-girl-2003",
+      "title": "Soldier's Girl (2003)",
+      "title-cs": "Vojákova dívky",
+      "description": "Hrdiny strhujícího amerického dramatu jsou jsou dva zamilovaní lidé, kteří však rozhodně netvoří standardní pár. Jeden z nich je muž a druhý - se chce stát ženou. Říká si Calpernia a živí se vystupováním v baru, který ve chvílích volna navštěvují vojíni z nedaleké základny. Jedním z nich je i nováček Barry Winchell. Ten je sám překvapen, jak ryzím ženstvím jej Calpernia okouzluje. Avšak než se z nich stane něžně zamilovaný pár, musí Barry překonat počáteční rozpaky i vlastní předsudky. Calpernia pro změnu jen nedůvěřivě a s obavami přijímá skutečnost, že je pro někoho opravdu přitažlivá. Jenže jsou tu ještě ostatní vojáci z kasáren, a některým není tak úplně jedno, jak si Barry počíná v soukromí.",
+      "labels": ["drama", "romantic", "true-story", "drag-queen", "transgender", "mtf"],
+      "types": ["movie", "!"],
+      "languages": ["english", "cs-sub"],
+      "items": [
+        { "title": "movie", "link": "https://prehraj.to/embed/617c99fdb0c06" }
+       ],
+      "runtime": "112 min",
+      "imdb": "tt0324013",
+      "creator": ["Bachrach/Gottlieb Productions"]
+    },
+    {
+      "id": "hedwig-and-the-angry-inch-2001",
+      "title": "Hedwig and the Angry Inch (2001)",
+      "title-cs": "Hedwig a Angry Inch",
+      "description": "Hansel Schmidt je gay teenager z východního Německa, který miluje rockovou hudbu a uvízl ve východním Berlíně, dokud se nesetká se seržantem Lutherem Robinsonem, americkým vojákem. Luther Hanselovi navrhne manželství a přesvědčí ho, aby podstoupil operaci na změnu pohlaví, aby mohl opustit komunistické Východní Německo a přestěhovat se na Západ jako jeho manželka, protože to byla jediná legální možnost. Hanselova matka Hedwig mu dá své jméno a pas a najde lékaře, který mu provede chirurgický zákrok. Operace se však pokazí a zanechá Hansela – nyní Hedwigu – s nefunkčním centimetr dlouhým výrůstkem mezi nohama, což je titulní Rozzlobený palec.",
+      "labels": ["comedy", "drama", "musical", "transgender", "mtf"],
+      "types": ["movie", "!"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://prehraj.to/embed/58b812bd6b8cb" }
+       ],
+      "runtime": "88 min",
+      "imdb": "tt0248845",
+      "creator": ["??"]
     },
     {
       "id": "big-mommas-house-2000",
@@ -264,6 +348,21 @@
       "runtime": "117 min",
       "imdb": "tt0115685",
       "creator": ["MGM"]
+    },
+    {
+      "id": "to-wong-foo-thanks-for-everything-julie-newmar-1995",
+      "title": "To Wong Foo, Thanks for Everything! Julie Newmar (1995)",
+      "title-cs": "Tři muži v negližé",
+      "description": "Tři newyorští travestité – Noxeema, Vida a Chi-Chi – se vydávají na cestu do Kalifornie starým cadillacem. Po cestě Vida navštíví své rodiče, kteří ji však odmítnou. V noci narazí na šerifa Dollarda, který si myslí, že jsou ženy. Když se pokusí Vidu obtěžovat, ta ho omráčí. Myslí si, že je mrtvý, a ujíždějí pryč. Auto se jim ale porouchá v zapadlém městečku, kde si získají místní ženy. Mezitím šerif zahájí pátrání a míří za nimi.",
+      "labels": ["comedy", "road-movie", "crossdress"],
+      "types": ["movie", "!"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://prehraj.to/embed/5ad2178ab0e4e" }
+       ],
+      "runtime": "109 min",
+      "imdb": "tt0114682",
+      "creator": ["Universal Pictures"]
     },
     {
       "id": "mrs-doubtfire-1993",
