@@ -75,6 +75,22 @@
       "creator": ["??"]
     },
     {
+      "id": "una-mujer-fantastica-2017",
+      "title": "Una Mujer Fantástica (2017)",
+      "title-cs": "Fantastická žena",
+      "title-en": "A Fantastic Woman",
+      "description": "Marina, servírka a zpěvačka, a Orlando, starší muž, se do sebe zamilují a plánují společnou budoucnost. Orlando však náhle onemocní a následně umírá. Coby transžena je Marina nucena bojovat nejen s Orlandovou rodinou, která je přesvědčena, že Marina nese za jeho smrt zodpovědnost, ale i s předsudky svého okolí, jež její sexuální identitu považuje za cosi nenormálního a zvráceného. A především za právo být sama sebou.",
+      "labels": ["drama", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["spanish", "cs-subs"],
+      "items": [
+        { "title": "movie", "link": "https://www.youtube.com/embed/Iwnm9GXDITs?si=fn3-uvU8WudKcFrK" }
+       ],
+      "runtime": "100 min",
+      "imdb": "tt5639354",
+      "creator": ["Fabula Komplizen Film"]
+    },
+    {
       "id": "the-assignment-2016",
       "title": "The Assignment (2016)",
       "description": "Dr. Rachel Jane, bývalá plastická chirurgyně s pokřivenou vizí lepšího světa, po ztrátě licence provádí nelegální operace na bezdomovcích. Když zjistí, že jejího bratra zavraždil zabiják Frank Kitchen, rozhodne se pomstít a zároveň otestovat hranice identity – provede na Frankovi změnu pohlaví. Frank je zděšený, ale po překonání šoku plánuje pomstu a zabíjí všechny, kteří se na jeho operaci podíleli. Nakonec zohaví Jane ruce, aby už nikdy nemohla operovat.",
@@ -276,6 +292,22 @@
       "creator": ["Columbia Pictures"]
     },
     {
+      "id": "la-mala-educacion-2004",
+      "title": "La mala educación (2004)",
+      "title-cs": "Špatná výchova",
+      "title-en": "Bad Education",
+      "description": "Režisér Enrique obdrží povídku od herce tvrdícího, že je jeho dávná láska Ignacio. Povídka vypráví o transgender drag queen Zahara (dříve Ignacio), která čelí traumatu zneužívání knězem Manolem na katolické internátní škole. Zahara plánuje vydírat Manola, aby získala peníze na operaci změny pohlaví. Enrique zjistí, že herec je ve skutečnosti Ignacioův mladší bratr Juan, který pomohl zavraždit Ignacio, aby utajil jeho trans identitu. Film odhaluje komplexní vrstvy identity, lásky a zrady.",
+      "labels": ["drama", "krimi", "mystery", "thriller", "drag-queen", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://online.sktorrent.eu/embed/c3a5d77f5dea10b77030" }
+       ],
+      "runtime": "101 min",
+      "imdb": "tt0275491",
+      "creator": ["El Deseo"]
+    },
+    {
       "id": "soldiers-girl-2003",
       "title": "Soldier's Girl (2003)",
       "title-cs": "Vojákova dívky",
@@ -319,6 +351,22 @@
       "runtime": "98 min",
       "imdb": "tt0208003",
       "creator": ["20th Century Fox"]
+    },
+    {
+      "id": "todo-sobre-mi-madre-1999",
+      "title": "Todo sobre mi madre (1999)",
+      "title-cs": "Vše o mé matce",
+      "title-en": "All About My Mother",
+      "description": "Estéban tragicky zemřel. Bylo mu čerstvých sedmnáct a poslední řádky v jeho deníku patřily otci, se kterým se nikdy nesetkal, protože matku opustil dřív, než se o existenci svého syna stačil dozvědět. Estébanova matka se proto rozhodne vydat po stopách svého mládí, transvestitu Lolu najít a dodatečně ho spravit o jeho otcovství.",
+      "labels": ["drama", "road-movie", "crossdress"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://online.sktorrent.eu/embed/78f284e94582992f29e5" }
+       ],
+      "runtime": "101 min",
+      "imdb": "tt0185125",
+      "creator": ["El Deseo"]
     },
     {
       "id": "boys-dont-cry-1999",
