@@ -1,6 +1,21 @@
 {
   "titles": [
     {
+      "id": "anythings-possible-2022",
+      "title": "Anything's Possible (2022)",
+      "title-cs": "Co kdyby",
+      "description": "Stydlivý středoškolák Khal v internetové diskusi anonymně zveřejní, že se zamiloval do pohodové trans spolužačky. Na základě pozitivních reakcí se rozhodne pozvat ji na rande. Odstartuje tím smršť nečekaných událostí a romantický příběh generace Z!",
+      "labels": ["comedy", "romantic", "teen", "school", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["cs-dab"],
+      "items": [
+        { "title": "movie", "link": "https://www.youtube.com/embed/S7IPE9ovloo?si=kolMZK99-aHqrV6p" }
+       ],
+      "runtime": "98 min",
+      "imdb": "tt11464446",
+      "creator": ["Orion Pictures"]
+    },
+    {
       "id": "aj-and-the-queen-2020",
       "title": "AJ and the Queen (2020)",
       "title-cs": "AJ a královna",
@@ -58,6 +73,24 @@
       "runtime": "358 min",
       "imdb": "tt8610916",
       "creator": ["CzechTV"]
+    },
+    {
+      "id": "joshi-teki-seikatsu-2018",
+      "title": "Joshi-teki Seikatsu! (2018)",
+      "title-en": "Life as a Girl",
+      "description": "Life as a Girl. Ogawa Miki toužila žít život roztomilé dívky a kvůli tomu se přestěhovala z venkova do města. Pracuje v módní mail-order společnosti. Ogawa Miki má však tajemství – je transgender. Ačkoli má vzhled krásné ženy, její pohlaví je mužské. Jednoho dne se před Miki objeví Goto Tadaomi, její spolužák ze střední školy. Goto Tadaomi je zaskočen Mikiiným vzhledem, ale náhodou se stanou spolubydlícími.",
+      "labels": ["comedy", "roommate", "fashion", "transgender", "mtf"],
+      "types": ["serie"],
+      "languages": ["japanese", "cs-subs"],
+      "items": [
+        { "title": "s01e01", "link": "https://drive.google.com/file/d/1NKeCerONywbem06-5jBnxB0SDWxSSyqM/preview" },
+        { "title": "s01e02", "link": "https://drive.google.com/file/d/1ZxMbTkLRYtLERgarpvhQKdkM9QFW2WQ3/preview" },
+        { "title": "s01e03", "link": "https://drive.google.com/file/d/1IEuBKl1Hv26XGztyWFlOLVyl7o2s6S28/preview" },
+        { "title": "s01e04", "link": "https://drive.google.com/file/d/11jR7q3qFr_QRXgrkZ0iPUW0WQ0PDecdC/preview" }
+       ],
+      "runtime": "158 min",
+      "imdb": "tt7701720",
+      "creator": ["NHK"]
     },
     {
       "id": "girl-2018",
@@ -131,6 +164,21 @@
       "runtime": "84 min",
       "imdb": "tt3824458",
       "creator": ["Magnolia Pictures"]
+    },
+    {
+      "id": "mein-sohn-helen-2015",
+      "title": "Mein Sohn Helen (2015)",
+      "title-en": "Call Me Helen",
+      "description": "Šestnáctiletý Finn Wilke žije v Berlíně se svým otcem Tobiasem, jehož manželka zemřela při cyklistické nehodě před třemi lety. Tobias pošle Finna strávit rok u tety v San Franciscu. O rok později se na letišti setká s Helen, svým dítětem, které nyní veřejně přiznává svou transgender identitu. Helen se svěřuje s pravdou a začíná hormonální terapii, aby oddálila pubertu. Její přechod, podporovaný její zesnulou matkou a poradcem, pokračuje v San Franciscu, včetně plánované gender-affirming operace.",
+      "labels": ["comedy", "drama", "parents", "transgender", "mtf"],
+      "types": ["movie"],
+      "languages": ["german", "cs-subs"],
+      "items": [
+        { "title": "movie", "link": "https://www.youtube.com/embed/qNXDzFvinR0?si=thKiQzt7ivca3gIX" }
+       ],
+      "runtime": "89 min",
+      "imdb": "tt4160870",
+      "creator": ["Beta Film GmbH"]
     },
     {
       "id": "boy-meets-girl-2014",
